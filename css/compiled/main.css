@@ -1,0 +1,165 @@
+@CHARSET "ISO-8859-1";
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, input, textarea, p, blockquote, th, td {
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+table {
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-weight: normal;
+  font-style: normal; }
+
+strong {
+  font-weight: bold; }
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  color: #444; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #3e3e3e;
+  color: rgba(62, 62, 62, 0.5); }
+
+h1 {
+  color: white;
+  font-size: 5em;
+  line-height: 1.4em;
+  margin: 0;
+  padding: 0; }
+
+h2 {
+  font-size: 3.2em; }
+
+h3 {
+  font-size: 2.4em; }
+
+h4, h5, h6 {
+  font-size: 2em; }
+
+p {
+  font-size: 2em; }
+
+dl, dt, dd, ul, ol, li, pre, form, p, blockquote, th, td {
+  font-size: 1em; }
+
+a {
+  color: #b6d436;
+  -webkit-transition: color 0.8s 0s ease;
+  -moz-transition: color 0.8s 0s ease;
+  -ms-transition: color 0.8s 0s ease;
+  -o-transition: color 0.8s 0s ease;
+  transition: color 0.8s 0s ease; }
+  a:hover {
+    color: #97b126; }
+
+ul {
+  margin-left: 0; }
+  ul li {
+    list-style-type: none; }
+
+#fullpage_menu li {
+  color: #fff; }
+  #fullpage_menu li a {
+    text-decoration: none;
+    color: #3e3e3e; }
+  #fullpage_menu li.active {
+    color: white; }
+    #fullpage_menu li.active a:hover {
+      color: #3e3e3e; }
+
+.wrap {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  position: relative; }
+
+.section {
+  background-color: #b6d436;
+  text-align: center; }
+
+#fullpage_menu {
+  height: 40px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 70; }
+  #fullpage_menu li {
+    background: white;
+    background: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    margin: 10px;
+    border-top-left-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -webkit-border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -webkit-border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -webkit-border-bottom-right-radius: 10px; }
+    #fullpage_menu li a {
+      display: block;
+      padding: 9px 18px; }
+    #fullpage_menu li.active {
+      background: #3e3e3e;
+      background: rgba(62, 62, 62, 0.5); }
+    #fullpage_menu li:hover {
+      background: white;
+      background: rgba(255, 255, 255, 0.8); }
+
+/* Styling for slide types : Video
+ * --------------------------------------- */
+.content-video .fp-video {
+  background-size: 100% 100%;
+  background-color: black;
+  /* in case the video doesn't fit the whole page*/
+  background-position: center center;
+  background-size: contain;
+  bottom: 0;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  object-fit: cover;
+  /*cover video background */ }
+.content-video .layer {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 43%;
+  width: 100%;
+  z-index: 11; }

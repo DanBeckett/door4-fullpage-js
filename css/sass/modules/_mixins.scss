@@ -1,0 +1,71 @@
+$emblock: 0.9875em;
+$emblockhalf: 0.46875em;
+
+// Mixins - General
+
+@mixin webfontReg {
+	font-family: 'Meta', Arial, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin webfontRegIta {
+	font-family: 'Meta', Arial, sans-serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+@mixin webfontBold {
+	font-family: 'Meta', Arial, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@mixin webfontBoldIta {
+	font-family: 'Meta', Arial, sans-serif;
+	font-weight: 700;
+	font-style: italic;
+}
+
+@mixin rounded($vert, $horz, $radius: 3px) {
+	border-#{$vert}-#{$horz}-radius: $radius;
+	-moz-border-radius-#{$vert}#{$horz}: $radius;
+	-webkit-border-#{$vert}-#{$horz}-radius: $radius;
+}
+
+@mixin fadeText { //applies a css transition to the text colour of links
+	-webkit-transition: color 150ms ease-out;
+	-moz-transition: color 150ms ease-out;
+	transition: color 150ms ease-out;
+}
+
+@mixin fadeBack { //applies a css transition to the background colour of links
+	-webkit-transition: background-color 150ms ease-out;
+	-moz-transition: background-color 150ms ease-out;
+	transition: background-color 150ms ease-out;
+}
+
+@mixin lockHeight($height) {
+	.lock-height-#{$height} {
+		height: #{$height};
+	}
+}
+
+@mixin buttonGrad($color) {
+		background: $color; /* Old browsers */
+		background: -moz-linear-gradient(top, $color 0%, $color 50%, desaturate(adjust_hue(darken($color, 1), 354), 4) 50%, desaturate(adjust_hue(darken($color, 1), 356), 1) 98%, $color 98%, desaturate(adjust_hue(darken($color, 1), 354), 4) 99%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color), color-stop(50%,$color), color-stop(50%,desaturate(adjust_hue(darken($color, 1), 354), 4)), color-stop(98%,desaturate(adjust_hue(darken($color, 1), 356), 1)), color-stop(98%,$color), color-stop(99%,desaturate(adjust_hue(darken($color, 1), 354), 4))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, $color 0%,$color 50%,desaturate(adjust_hue(darken($color, 1), 354), 4) 50%,desaturate(adjust_hue(darken($color, 1), 356), 1) 98%,$color 98%,desaturate(adjust_hue(darken($color, 1), 354), 4) 99%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, $color 0%,$color 50%,desaturate(adjust_hue(darken($color, 1), 354), 4) 50%,desaturate(adjust_hue(darken($color, 1), 356), 1) 98%,$color 98%,desaturate(adjust_hue(darken($color, 1), 354), 4) 99%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, $color 0%,$color 50%,desaturate(adjust_hue(darken($color, 1), 354), 4) 50%,desaturate(adjust_hue(darken($color, 1), 356), 1) 98%,$color 98%,desaturate(adjust_hue(darken($color, 1), 354), 4) 99%); /* IE10+ */
+		background: linear-gradient(to bottom, $color 0%,$color 50%,desaturate(adjust_hue(darken($color, 1), 354), 4) 50%,desaturate(adjust_hue(darken($color, 1), 356), 1) 98%,$color 98%,desaturate(adjust_hue(darken($color, 1), 354), 4) 99%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color', endColorstr='desaturate(adjust_hue(darken($color, 1), 354), 4)',GradientType=0 ); /* IE6-9 */	
+}
+
+@mixin transition($property, $duration: 0.5s, $delay: 0s, $easing: ease) {
+	-webkit-transition: $property $duration $delay $easing;
+    -moz-transition: $property $duration $delay $easing;
+    -ms-transition: $property $duration $delay $easing;
+    -o-transition: $property $duration $delay $easing;
+    transition: $property $duration $delay $easing;
+}

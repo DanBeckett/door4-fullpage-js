@@ -1,0 +1,73 @@
+.wrap {
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+
+.section {
+	background-color: $accent1;
+	text-align: center;
+}
+
+#fullpage_menu {
+	height: 40px;
+	left:0;
+	margin:0;
+	padding: 0;
+	position:fixed;
+	top:0;
+	width: 100%;
+	z-index: 70;
+	li {
+		background: $innerbg;
+		background: rgba($innerbg, .5);
+		display:inline-block;
+		margin: 10px;
+		@include rounded(top, left, 10px);
+		@include rounded(top, right, 10px);
+		@include rounded(bottom, left, 10px);
+		@include rounded(bottom, right, 10px);
+		a {
+			display: block;
+			padding: 9px 18px;
+		}
+		&.active {
+			background: $maintext;
+			background: rgba($maintext, .5);
+		}
+		&:hover {
+			background: $innerbg;
+			background: rgba($innerbg, .8);
+		}
+	}
+}
+
+/* Styling for slide types : Video
+ * --------------------------------------- */
+
+ .content-video {
+	 .fp-video{
+		background-size: 100% 100%;
+		background-color: black; /* in case the video doesn't fit the whole page*/
+		//background-image: /* our video */;
+		background-position: center center;
+		background-size: contain;
+		bottom: 0;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		top:0;
+		width: 100%;
+		z-index: 10;
+		object-fit: cover; /*cover video background */
+	}
+	.layer{
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 43%;
+		width: 100%;
+		z-index: 11;
+	}
+}
