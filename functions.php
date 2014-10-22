@@ -31,7 +31,7 @@ function door4_fullpage_scripts() {
 
 	// Load our main stylesheet.
 	wp_enqueue_style( 'default-style-css', get_stylesheet_uri() );
-	wp_enqueue_style( 'jquery-fullpage-style', get_template_directory_uri() . '/css/jQuery.fullPage.css', array(), '2.1.9' );
+	wp_enqueue_style( 'jquery-fullpage-style', get_template_directory_uri() . '/css/jquery.fullPage.css', array(), '2.1.9' );
 	wp_enqueue_style( 'compiled-stylesheet', get_template_directory_uri() . '/css/compiled/main.css', array(), '0.8.0' );
 
 	// Load the Internet Explorer specific stylesheet.
@@ -54,7 +54,7 @@ function door4_fullpage_scripts() {
 	//wp_enqueue_script( 'vendor-jquery-slimscroll', get_template_directory_uri() . '/js/vendors/jquery.slimscroll.min.js', array('jquery', 'jquery-ui-whole' ), '1.3.2', true );
 
 	// main script for fullPage.js
-	wp_enqueue_script( 'jquery-fullpage', get_template_directory_uri() . '/js/jQuery.fullPage.min.js', array('jquery', 'jquery-ui-whole' ), '2.2.9', true );
+	wp_enqueue_script( 'jquery-fullpage', get_template_directory_uri() . '/js/jquery.fullPage.min.js', array('jquery', 'jquery-ui-whole' ), '2.2.9', true );
 	
 	// theme functions - initialisations etc.
 	wp_enqueue_script( 'door4-fullpage-scripts', get_template_directory_uri() . '/js/functions.js', array( 'jquery', 'jquery-ui-whole', 'jquery-fullpage' ), '20140930', true );
