@@ -27,6 +27,20 @@ endif;
 
 add_action('after_setup_theme', 'door4_fullpage_setup');
 
+if(function_exists('acf_add_options_page')) {
+
+	$settings = array (
+		'page_title'	=>	'Door4 fullPage.js Theme Options',
+		'menu_title'	=>	'Theme Options',
+		'menu_slug'	=>	'theme-options',
+		'position'	=>	'30.1',
+		'icon_url'	=>	'dashicons-admin-generic'
+	);
+
+	acf_add_options_page($settings);
+
+};
+
 function door4_fullpage_scripts() {
 
 	// Load our main stylesheet.
@@ -66,7 +80,7 @@ add_action( 'wp_enqueue_scripts', 'door4_fullpage_scripts' );
 // calling the slug for links so we can slide up/down the page
 class door4_datamenuanchor_menu extends Walker_Nav_Menu
   {
-        function start_el(&$output, $item, $depth, $args)
+        function start_el(&$output, $item, $depth = 0, $args = Array(), $id = 0)
         {
         	$post = get_post($item->object_id);
 			$slug = $post->post_name;
